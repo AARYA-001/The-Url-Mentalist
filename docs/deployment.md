@@ -12,8 +12,8 @@
 ## 1. Clone and configure
 
 ```bash
-git clone repo_link
-cd the-url-mentalist
+git clone https://github.com/AARYA-001/The-Url-Mentalist.git
+cd The-Url-Mentalist
 ```
 
 Create the backend env file:

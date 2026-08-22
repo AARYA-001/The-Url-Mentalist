@@ -31,8 +31,8 @@
       "@type": "Person",
       name: "Gang0",
     },
-    license: "repo_link/blob/main/LICENSE",
-    codeRepository: "repo_link",
+    license: "https://github.com/AARYA-001/The-Url-Mentalist/blob/main/LICENSE",
+    codeRepository: "https://github.com/AARYA-001/The-Url-Mentalist",
     featureList: [
       "Real-time URL scanning",
       "Phishing detection",

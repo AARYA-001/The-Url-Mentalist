@@ -29,7 +29,7 @@
     alternateName: ["Url Mentalist", "T-H-E U-R-L M-E-N-T-A-L-I-S-T"],
     url: "Live_deployment_link",
     logo: "Live_deployment_link/favicon.ico",
-    sameAs: ["repo_link"],
+    sameAs: ["https://github.com/AARYA-001/The-Url-Mentalist"],
   };
 
   onMount(() => {

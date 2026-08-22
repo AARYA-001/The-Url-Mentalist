@@ -179,13 +179,50 @@ make ci
 
 ---
 
+## 👥 Team & Contributors
+
+This project is created and actively maintained by **Team Gang0**:
+
+| Contributor | Role & Contributions |
+| :--- | :--- |
+| **[Aarya Jadhav](https://github.com/AARYA-001)** | **Lead Developer & System Architect**<br>• Core engine design & concurrent analysis pipeline (`internal/analyzer`)<br>• Heuristic scoring model, router architecture, and cache orchestration |
+| **Ritesh** | **Backend & Security Analyzers**<br>• Real-time threat intelligence integrations (`phishtank`, `typosquat`)<br>• DNS, MX, NS infrastructure checks, and TLS/SSL certificate validation |
+| **Rahul** | **Frontend & Extension Engineering**<br>• SvelteKit 5 dashboard UI, animations, and dark/light mode theme system<br>• Chrome browser extension for live URL inspection |
+| **Tanay** | **DevOps & Quality Assurance**<br>• Docker multi-stage build configurations and compose orchestration<br>• CI/CD pipeline automation, test suites, and documentation |
+
+We also welcome contributions from the open-source community! Check out our [Contributors Graph](https://github.com/AARYA-001/The-Url-Mentalist/graphs/contributors).
+
+---
+
+## 🤝 Contributing
+
+We love contributions! Whether it's fixing bugs, improving heuristics, adding new signal analyzers, or refining the UI:
+
+1. **Fork the Repository** on GitHub.
+2. **Create a Feature Branch**:
+   ```bash
+   git checkout -b feat/your-feature-name
+   ```
+3. **Run CI Checks Locally**:
+   ```bash
+   make ci
+   ```
+4. **Commit & Push**:
+   ```bash
+   git commit -m "feat: describe your change"
+   git push origin feat/your-feature-name
+   ```
+5. **Open a Pull Request**: Follow the [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md) and see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for full guidelines.
+
+---
+
 ## 📜 Citation
 
 If you use The Url Mentalist in academic work or research, please cite it using [`CITATION.cff`](CITATION.cff):
 
 ```bibtex
 @software{The_Url_Mentalist,
-  author = {Jadhav, Aarya},
+  author = {Jadhav, Aarya and Ritesh and Rahul and Tanay},
   title = {The Url Mentalist: Real-Time URL Safety and Phishing Detection Engine},
   url = {https://github.com/AARYA-001/The-Url-Mentalist},
   year = {2026}
@@ -197,3 +234,4 @@ If you use The Url Mentalist in academic work or research, please cite it using 
 ## 📄 License
 
 This project is licensed under the [AGPL-3.0 License](LICENSE).
+

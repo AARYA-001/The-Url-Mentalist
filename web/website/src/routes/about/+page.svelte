@@ -65,75 +65,63 @@
     </section>
 
     <!-- Team -->
+    <!-- Team & Contributors -->
     <section class="mb-14">
-      <h2 class="text-xl font-semibold mb-6">Team</h2>
-      <div
-        class="flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl mb-4"
-      >
-        <img
-          src="https://avatars.githubusercontent.com/u/65501471?v=4"
-          alt="Gang0"
-          class="w-14 h-14 rounded-full flex-shrink-0"
-          loading="lazy"
-        />
-        <div>
-          <a
-            href="repo_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="font-semibold hover:underline">Gang0</a
-          >
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 mb-2">
-            Creator &amp; maintainer
-          </p>
-          <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-            Built by Gang0 to make suspicious links easier to investigate.
-          </p>
-          <div class="flex items-center gap-4 mt-3">
-            <a
-              href="repo_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 .5C5.648.5.5 5.648.5 12c0 5.084 3.292 9.387 7.872 10.905.576.106.784-.25.784-.556 0-.274-.01-1-.016-1.974-3.2.694-3.876-1.544-3.876-1.544-.522-1.33-1.276-1.683-1.276-1.683-1.042-.714.08-.699.08-.699 1.152.08 1.756 1.183 1.756 1.183 1.024 1.754 2.688 1.246 3.344.952.104-.742.4-1.246.728-1.532-2.554-.292-5.238-1.276-5.238-5.674 0-1.252.448-2.274 1.184-3.076-.12-.292-.512-1.468.112-3.064 0 0 .964-.308 3.16 1.176.916-.254 1.9-.382 2.876-.388.976.006 1.96.134 2.876.388 2.192-1.484 3.156-1.176 3.156-1.176.624 1.596.232 2.772.112 3.064.736.802 1.184 1.824 1.184 3.076 0 4.408-2.69 5.38-5.25 5.664.412.354.78 1.05.78 2.118 0 1.532-.014 2.768-.014 3.144 0 .308.2.672.788.556C20.708 21.385 24 17.084 24 12c0-6.352-5.148-11.5-12-11.5z"
-                />
-              </svg>
-              Gang0
-            </a>
-            <a
-              href="mailto:team@the-url-mentalist.example"
-              class="inline-flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <svg
-                class="w-3.5 h-3.5"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              team@the-url-mentalist.example
-            </a>
+      <h2 class="text-xl font-semibold mb-6">Team & Contributors</h2>
+      <div class="grid sm:grid-cols-2 gap-4 mb-6">
+        <div class="flex items-start gap-3.5 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+            A
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Aarya Jadhav</h3>
+            <p class="text-xs text-blue-600 dark:text-blue-400 font-medium">Lead Developer &amp; Architect</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Core engine design, concurrent analysis pipeline, and heuristic integration.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+            R
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Ritesh</h3>
+            <p class="text-xs text-purple-600 dark:text-purple-400 font-medium">Backend &amp; Security Analyzers</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Threat intelligence lookups, DNS infrastructure, and TLS validation.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+            R
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Rahul</h3>
+            <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Frontend &amp; Extension</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">SvelteKit web interface, Chrome extension, and user experience.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3.5 p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl">
+          <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-amber-600 to-orange-500 flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+            T
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 dark:text-white">Tanay</h3>
+            <p class="text-xs text-amber-600 dark:text-amber-400 font-medium">DevOps &amp; Quality Assurance</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Docker containerization, CI/CD automation, testing, and documentation.</p>
           </div>
         </div>
       </div>
       <p class="text-base text-gray-500 dark:text-gray-400">
-        With help from
+        Created by <strong>Team Gang0</strong> with contributions from
         <a
-          href="repo_link/graphs/contributors"
+          href="https://github.com/AARYA-001/The-Url-Mentalist/graphs/contributors"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white underline underline-offset-2 transition-colors"
-          >friends</a
-        > on GitHub.
+          >contributors on GitHub</a
+        >.
       </p>
     </section>
 
@@ -148,7 +136,7 @@
       <p class="text-base text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
         The community edition is licensed under
         <a
-          href="repo_link/blob/main/LICENSE"
+          href="https://github.com/AARYA-001/The-Url-Mentalist/blob/main/LICENSE"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-900 dark:text-white underline underline-offset-2">AGPL-3.0</a
@@ -157,7 +145,7 @@
       </p>
       <div class="flex flex-wrap gap-3">
         <a
-          href="repo_link"
+          href="https://github.com/AARYA-001/The-Url-Mentalist"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-lg text-base font-medium hover:bg-gray-700 dark:hover:bg-gray-200 transition-colors"
@@ -170,7 +158,7 @@
           View on GitHub
         </a>
         <a
-          href="repo_link/issues"
+          href="https://github.com/AARYA-001/The-Url-Mentalist/issues"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 border border-gray-300 dark:border-gray-700 px-4 py-2 rounded-lg text-base font-medium hover:border-gray-500 dark:hover:border-gray-500 transition-colors"
