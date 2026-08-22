@@ -40,6 +40,7 @@ dist/
 build/
 .svelte-kit/
 .svelte/
+.vercel/
 *.tsbuildinfo
 
 # SvelteKit specific
