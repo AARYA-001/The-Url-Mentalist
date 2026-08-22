@@ -1,0 +1,67 @@
+services:
+  backend:
+    build:
+      context: ../../server
+      dockerfile: ../docker/prod/go.Dockerfile
+    container_name: urlvet-backend
+    environment:
+      CACHE_ADDR: "urlvet-valkey:6379"
+      CACHE_PASSWORD: "${CACHE_PASSWORD}"
+      PORT: "8080"
+      CHROME_URL: "ws://chrome:9222"
+    depends_on:
+      valkey:
+        condition: service_healthy
+      chrome:
+        condition: service_started
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - urlvet-net
+
+  chrome:
+    image: chromedp/headless-shell:latest
+    container_name: urlvet-chrome
+    restart: unless-stopped
+    networks:
+      - urlvet-net
+
+  web:
+    build:
+      context: ../..
+      dockerfile: ./docker/prod/web.Dockerfile
+    container_name: urlvet-web
+    depends_on:
+      backend:
+        condition: service_started
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    networks:
+      - urlvet-net
+
+  valkey:
+    image: valkey/valkey:8.0
+    container_name: urlvet-valkey
+    environment:
+      REDISCLI_AUTH: "${CACHE_PASSWORD}"
+    volumes:
+      - valkey_data:/data
+      - ./valkey.conf:/usr/local/etc/valkey.conf:ro
+    command: ["valkey-server", "/usr/local/etc/valkey.conf", "--requirepass", "${CACHE_PASSWORD}"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "-h", "localhost", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - urlvet-net
+
+networks:
+  urlvet-net:
+    driver: bridge
+
+volumes:
+  valkey_data:

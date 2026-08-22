@@ -1,0 +1,50 @@
+# -----------------
+# Node/Svelte
+# -----------------
+node_modules
+dist
+build
+.svelte-kit
+.svelte
+*.tsbuildinfo
+
+# -----------------
+# Go
+# -----------------
+bin
+# pkg
+*.exe
+*.test
+*.out
+*.log
+*.prof
+*.coverprofile
+
+# -----------------
+# Git
+# -----------------
+.git
+.gitignore
+
+# -----------------
+# Docker
+# -----------------
+Dockerfile
+.dockerignore
+
+# -----------------
+# IDE/Editor/System
+# -----------------
+.vscode
+.idea
+*.swp
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# -----------------
+# Env files (if using secrets)
+# -----------------
+.env
+.env.*

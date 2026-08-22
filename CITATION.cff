@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "The Url Mentalist"
+type: Web Application
+authors:
+  - Team-name: Gang0 
+    given-names: Aarya, Ritesh, Rahul, Tanay
+repository-code: "https://github.com/AARYA-001/The-Url-Mentalist"
+url: "https://github.com/AARYA-001/The-Url-Mentalist"
+keywords:
+  - phishing-detection
+  - cybersecurity
+  - machine-learning
+  - web-security
+abstract: >
+  The Url Mentalist (pronounced "THE URL MENTALIST") is an open-source phishing domain detection
+  system that analyzes URLs to identify malicious websites.
+preferred-citation:
+  type: web-application
+  authors:
+    - Team-name: Gang0
+      given-names: Aarya, Ritesh, Rahul, Tanay
+  title: "The Url Mentalist"
+  year: 2026
+  url: "https://github.com/AARYA-001/The-Url-Mentalist"

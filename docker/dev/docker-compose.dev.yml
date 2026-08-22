@@ -1,0 +1,79 @@
+services:
+  backend:
+    build:
+      context: ../../server         # build context is the server folder
+      dockerfile: ../docker/dev/go.Dockerfile
+    container_name: urlvet-backend-dev
+    environment:
+      CACHE_ADDR: "urlvet-valkey-dev:6379"
+      CACHE_PASSWORD: "${CACHE_PASSWORD}"
+      PORT: "8080"
+      CHROME_URL: "ws://chrome:9222"
+    volumes:
+      - ../../server:/app
+      - ../../server/.air.toml:/app/.air.toml:ro
+      # Optional: mount screenshots to host for easy viewing/debug
+      - urlvet_screenshots:/app/tmp/screenshots
+    ports:
+      - "8080:8080"
+    depends_on:
+      valkey:
+        condition: service_healthy
+      chrome:
+        condition: service_started
+    networks:
+      - urlvet-dev-net
+  
+  chrome:
+    image: chromedp/headless-shell:latest
+    container_name: urlvet-chrome-dev
+    restart: unless-stopped
+    networks:
+      - urlvet-dev-net
+
+  web:
+    build:
+      context: ../..                # repo root (so Dockerfile can COPY web/website/package*.json)
+      dockerfile: ./docker/dev/web.Dockerfile
+    container_name: urlvet-web-dev
+    working_dir: /app
+    environment:
+      - HOST=0.0.0.0
+      - PORT=5173
+    volumes:
+      - ../../web/website:/app      # mount svelte source for hot reload
+      - /app/node_modules          # keep container's node_modules (avoid host fs issues)
+    ports:
+      - "5173:5173"
+    networks:
+      - urlvet-dev-net
+
+  valkey:
+    image: valkey/valkey:8.0
+    container_name: urlvet-valkey-dev
+    environment:
+      REDISCLI_AUTH: "${CACHE_PASSWORD}"
+    ports:
+      - "6379:6379"
+    volumes:
+      - valkey_dev_data:/data
+    command: >
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --save 60 1000
+      --requirepass ${CACHE_PASSWORD}
+    healthcheck:
+      test: ["CMD", "redis-cli", "-h", "localhost", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    networks:
+      - urlvet-dev-net
+
+networks:
+  urlvet-dev-net:
+    driver: bridge
+
+volumes:
+  valkey_dev_data:
+  urlvet_screenshots:

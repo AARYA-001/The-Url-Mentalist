@@ -1,0 +1,8 @@
+# The Url Mentalist robots.txt
+
+User-agent: *
+Disallow: /admin
+Disallow: /admin/
+Disallow: /?q=%7Bsearch_term_string%7D
+
+Sitemap: Live_deployment_link/sitemap.xml
