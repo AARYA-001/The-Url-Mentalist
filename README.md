@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/urlvet.png" alt="The Url Mentalist Logo" width="180" />
+  <img src="assets/url-mentalist-preview.png" alt="The Url Mentalist Dashboard" width="850" />
 </p>
 
 <h1 align="center">The Url Mentalist</h1>
